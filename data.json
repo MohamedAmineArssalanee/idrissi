@@ -24,9 +24,8 @@
 
   "categories": [
     { "id": "all",             "icon": "🍽️" },
-    { "id": "amine",           "icon": "9" },
     { "id": "sandwichs",       "icon": "🥪" },
-    { "id": "grillades",       "icon": "🥩" }
+    { "id": "grillades",       "icon": "🥩" },
     { "id": "accompagnements", "icon": "🍟" },
     { "id": "salades",         "icon": "🥗" },
     { "id": "boissons",        "icon": "🧃" },
@@ -40,13 +39,6 @@
       "desc":  { "fr": "Viande hachée épicée grillée au charbon de bois", "en": "Spiced minced meat grilled over charcoal", "ar": "لحم مفروم متبّل مشوي على الفحم" },
       "price": 50, "spice": 2, "popular": true,  "isNew": false, "isSpecial": false,
       "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=500&q=80"
-    },
-    {
-      "id": 1, "category": "amine",
-      "name":  { "fr": "Kefta Brochette",      "en": "Kefta Skewer",       "ar": "كفتة مشوية" },
-      "desc":  { "fr": "Viande hachée épicée grillée au charbon de bois", "en": "Spiced minced meat grilled over charcoal", "ar": "لحم مفروم متبّل مشوي على الفحم" },
-      "price": 45, "spice": 2, "popular": true,  "isNew": false, "isSpecial": false,
-      "image": "https://patisseriegato.ma/wp-content/uploads/2023/08/kefta-marocaine.webp"
     },
     {
       "id": 2, "category": "grillades",
