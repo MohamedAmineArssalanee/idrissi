@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr" class="lang-fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Snack El Idrissi – Restaurant Marocain à Casablanca | Menu & Commande</title>
+  <meta name="description" content="Snack El Idrissi à Casablanca – Cuisine marocaine authentique : grillades, sandwichs, salades. Commandez sur WhatsApp. Ouvert jusqu'à 23h.">
+  <meta name="keywords"    content="snack casablanca, restaurant marocain, kefta, brochettes, commande whatsapp, livraison casa">
+  <meta property="og:title"       content="Snack El Idrissi – Saveurs Marocaines à Casablanca">
+  <meta property="og:description" content="Grillades, sandwichs et plats marocains authentiques. 46 avis · 4.5 étoiles.">
+  <meta property="og:type"        content="restaurant">
+  <meta property="og:locale"      content="fr_MA">
+  <meta name="theme-color"        content="#08070A">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,700&family=Tajawal:wght@400;700&family=Libre+Baskerville:ital@0;1&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ─── SCROLL PROGRESS ─────────────────────────────── -->
+<div id="scroll-progress" role="progressbar" aria-hidden="true"></div>
+
+<!-- ─── LOADER ──────────────────────────────────────── -->
+<div id="loader" role="status" aria-live="polite" aria-label="Chargement…">
+  <svg id="loader-logo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path class="crescent" d="M50 8C26 8 8 26 8 50s18 42 42 42c-14-8-22-24-22-42S36 16 50 8z"
+          stroke="#C9A84C" stroke-width="2" fill="rgba(201,168,76,0.12)"/>
+    <path d="M66 22l2.5 7.5H77l-6.3 4.6 2.5 7.5L67 37l-6.3 4.6 2.5-7.5L57 29.5h8.5z"
+          fill="#C9A84C" opacity="0.9"/>
+    <circle cx="50" cy="50" r="38" stroke="#C9A84C" stroke-width="0.5" stroke-dasharray="4 6" opacity="0.35"/>
+  </svg>
+  <div id="loader-name" aria-hidden="true"></div>
+  <p id="loader-tagline">Saveurs Authentiques du Maroc</p>
+  <div id="loader-bar-wrap" aria-hidden="true"><div id="loader-bar"></div></div>
+</div>
+
+<!-- ─── HEADER ──────────────────────────────────────── -->
+<header id="header" role="banner">
+  <a href="#hero" class="header-logo" aria-label="Snack El Idrissi — Accueil">
+    <svg width="42" height="42" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+      <path class="crescent" d="M50 8C26 8 8 26 8 50s18 42 42 42c-14-8-22-24-22-42S36 16 50 8z"
+            fill="rgba(201,168,76,0.14)" stroke="#C9A84C" stroke-width="2"/>
+      <path d="M66 22l2.5 7.5H77l-6.3 4.6 2.5 7.5L67 37l-6.3 4.6 2.5-7.5L57 29.5h8.5z" fill="#C9A84C" opacity="0.88"/>
+    </svg>
+    <div class="logo-text">
+      <span class="logo-name">Snack El Idrissi</span>
+      <span class="logo-sub">Casablanca</span>
+    </div>
+  </a>
+
+  <nav role="navigation" aria-label="Navigation principale">
+    <a href="#hero"     class="nav-link active" data-i18n="nav_home">Accueil</a>
+    <a href="#menu"     class="nav-link"         data-i18n="nav_menu">Menu</a>
+    <a href="#about"    class="nav-link"         data-i18n="nav_about">À propos</a>
+    <a href="#gallery"  class="nav-link"         data-i18n="nav_gallery">Galerie</a>
+    <a href="#info-band" class="nav-link"        data-i18n="nav_contact">Contact</a>
+  </nav>
+
+  <div class="header-right">
+    <div class="lang-switcher" role="group" aria-label="Choisir la langue">
+      <button class="lang-btn"        data-lang="ar" onclick="setLanguage('ar')" aria-label="عربي">🇲🇦 AR</button>
+      <button class="lang-btn active" data-lang="fr" onclick="setLanguage('fr')" aria-label="Français">🇫🇷 FR</button>
+      <button class="lang-btn"        data-lang="en" onclick="setLanguage('en')" aria-label="English">🇬🇧 EN</button>
+    </div>
+
+    <button class="cart-btn" onclick="openCart()" aria-label="Ouvrir le panier">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <path d="M16 10a4 4 0 01-8 0"/>
+      </svg>
+      <span class="cart-badge hidden" id="cart-badge" aria-live="polite">0</span>
+    </button>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu de navigation" aria-expanded="false"
+            onclick="toggleMobileMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ─── MOBILE MENU ─────────────────────────────────── -->
+<div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation mobile">
+  <a href="#hero"      class="nav-link" data-i18n="nav_home"    onclick="closeMobileMenu()" style="animation-delay:0ms">Accueil</a>
+  <a href="#menu"      class="nav-link" data-i18n="nav_menu"    onclick="closeMobileMenu()" style="animation-delay:80ms">Menu</a>
+  <a href="#about"     class="nav-link" data-i18n="nav_about"   onclick="closeMobileMenu()" style="animation-delay:160ms">À propos</a>
+  <a href="#gallery"   class="nav-link" data-i18n="nav_gallery" onclick="closeMobileMenu()" style="animation-delay:240ms">Galerie</a>
+  <a href="#info-band" class="nav-link" data-i18n="nav_contact" onclick="closeMobileMenu()" style="animation-delay:320ms">Contact</a>
+  <div class="mobile-lang" role="group" aria-label="Langue">
+    <button class="lang-btn"        data-lang="ar" onclick="setLanguage('ar');closeMobileMenu()" aria-label="عربي">🇲🇦 AR</button>
+    <button class="lang-btn active" data-lang="fr" onclick="setLanguage('fr');closeMobileMenu()" aria-label="Français">🇫🇷 FR</button>
+    <button class="lang-btn"        data-lang="en" onclick="setLanguage('en');closeMobileMenu()" aria-label="English">🇬🇧 EN</button>
+  </div>
+</div>
+
+<!-- ─── HERO ─────────────────────────────────────────── -->
+<section id="hero" aria-label="Accueil">
+  <div class="hero-bg"     aria-hidden="true"></div>
+  <div class="hero-zellige" id="hero-zellige" aria-hidden="true"></div>
+
+  <!-- Corner ornaments -->
+  <svg class="hero-corner tl" aria-hidden="true" viewBox="0 0 110 110" fill="none">
+    <path d="M0,0 L55,0 L55,9 L9,9 L9,55 L0,55Z" stroke="#C9A84C" stroke-width="1" fill="none"/>
+    <path d="M22,22 L48,22 L48,48 L22,48Z" stroke="#C9A84C" stroke-width="0.5" fill="none" transform="rotate(45 35 35)"/>
+    <path d="M35 19l2 6.5h7l-5.5 4 2 6.5L35 32l-5.5 4 2-6.5L26 25.5h7z" stroke="#C9A84C" stroke-width="0.5" fill="rgba(201,168,76,0.1)"/>
+  </svg>
+  <svg class="hero-corner tr" aria-hidden="true" viewBox="0 0 110 110" fill="none">
+    <path d="M0,0 L55,0 L55,9 L9,9 L9,55 L0,55Z" stroke="#C9A84C" stroke-width="1" fill="none"/>
+    <path d="M22,22 L48,22 L48,48 L22,48Z" stroke="#C9A84C" stroke-width="0.5" fill="none" transform="rotate(45 35 35)"/>
+  </svg>
+  <svg class="hero-corner bl" aria-hidden="true" viewBox="0 0 110 110" fill="none">
+    <path d="M0,0 L55,0 L55,9 L9,9 L9,55 L0,55Z" stroke="#C9A84C" stroke-width="1" fill="none"/>
+    <path d="M22,22 L48,22 L48,48 L22,48Z" stroke="#C9A84C" stroke-width="0.5" fill="none" transform="rotate(45 35 35)"/>
+  </svg>
+  <svg class="hero-corner br" aria-hidden="true" viewBox="0 0 110 110" fill="none">
+    <path d="M0,0 L55,0 L55,9 L9,9 L9,55 L0,55Z" stroke="#C9A84C" stroke-width="1" fill="none"/>
+    <path d="M22,22 L48,22 L48,48 L22,48Z" stroke="#C9A84C" stroke-width="0.5" fill="none" transform="rotate(45 35 35)"/>
+  </svg>
+
+  <div class="hero-content">
+    <div class="hero-star-ornament" aria-hidden="true">
+      <svg width="60" height="60" viewBox="0 0 64 64" fill="none">
+        <path d="M32 4l2.8 9.6 10.2-3.3-6 8.4 8.5 5.3-10.1.9L40 35l-8-5.5L32 40l0-10.5L24 35l2.6-10.1-10.1-.9 8.5-5.3-6-8.4 10.2 3.3z"
+              stroke="#C9A84C" stroke-width="1" fill="rgba(201,168,76,0.12)"/>
+        <circle cx="32" cy="32" r="26" stroke="#C9A84C" stroke-width="0.5" stroke-dasharray="3 5" opacity="0.4"/>
+      </svg>
+    </div>
+
+    <p class="hero-pretitle" data-i18n="hero_pretitle">Restaurant Marocain · Casablanca</p>
+    <h1 class="hero-title">Snack El Idrissi</h1>
+    <div class="hero-divider" aria-hidden="true">◆ ─────── ◆ ─────── ◆</div>
+    <p class="hero-typewriter" id="hero-typewriter" aria-live="polite"></p>
+
+    <div class="hero-rating" aria-label="Note 4.5 sur 5, 46 avis Google">
+      <span class="stars" aria-hidden="true">★★★★½</span>
+      <span class="rating-text">4.5 / 5 · 46 avis Google</span>
+    </div>
+
+    <div class="hero-ctas">
+      <a href="#menu" class="btn-primary" data-i18n="cta_menu">Voir le Menu</a>
+      <button class="btn-secondary" onclick="openCart()" data-i18n="cta_order">Commander</button>
+    </div>
+
+    <div class="hero-open-badge" role="status" data-i18n="open_until">Ouvert · Jusqu'à 23h00</div>
+  </div>
+
+  <button class="scroll-arrow" onclick="scrollToStats()" aria-label="Défiler vers le bas">
+    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 5v14M5 12l7 7 7-7"/>
+    </svg>
+  </button>
+</section>
+
+<!-- ─── STATS ─────────────────────────────────────────── -->
+<div id="stats" role="region" aria-label="Chiffres clés">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <div class="stat-icon" aria-hidden="true">
+        <svg width="32" height="32" fill="none" stroke="#C9A84C" stroke-width="2" viewBox="0 0 24 24">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      </div>
+      <div id="stat-reviews" class="stat-value" data-count="46">0</div>
+      <div class="stat-label" data-i18n="stat_reviews">Avis clients</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon" aria-hidden="true">
+        <svg width="32" height="32" fill="none" stroke="#C9A84C" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M12 15a7 7 0 100-14 7 7 0 000 14zM8.21 13.89L7 23l5-3 5 3-1.21-9.12"/>
+        </svg>
+      </div>
+      <div id="stat-rating" class="stat-value" data-count="4.5" data-decimal="1">0</div>
+      <div class="stat-label" data-i18n="stat_rating">Note Google</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon" aria-hidden="true">
+        <svg width="32" height="32" fill="none" stroke="#C9A84C" stroke-width="2" viewBox="0 0 24 24">
+          <line x1="12" y1="1" x2="12" y2="23"/>
+          <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+        </svg>
+      </div>
+      <div id="stat-price" class="stat-value" data-count="65">0</div>
+      <div class="stat-label" data-i18n="stat_price">Prix moyen MAD</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon" aria-hidden="true">
+        <svg width="32" height="32" fill="none" stroke="#C9A84C" stroke-width="2" viewBox="0 0 24 24">
+          <rect x="3" y="4" width="18" height="18" rx="2"/>
+          <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/>
+          <line x1="3" y1="10" x2="21" y2="10"/>
+        </svg>
+      </div>
+      <div id="stat-founded" class="stat-value" data-count="2010">0</div>
+      <div class="stat-label" data-i18n="stat_since">Fondé en</div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── MENU ──────────────────────────────────────────── -->
+<main id="menu" class="section" role="main" aria-label="Carte du restaurant">
+  <div class="section-header">
+    <div class="section-ornament" aria-hidden="true">
+      <svg width="40" height="20" viewBox="0 0 40 20" fill="none">
+        <line x1="0" y1="10" x2="14" y2="10" stroke="#C9A84C" stroke-width="1"/>
+        <circle cx="20" cy="10" r="4" stroke="#C9A84C" stroke-width="1" fill="rgba(201,168,76,0.1)"/>
+        <line x1="26" y1="10" x2="40" y2="10" stroke="#C9A84C" stroke-width="1"/>
+      </svg>
+    </div>
+    <h2 class="section-title" data-i18n="section_menu">Notre Menu</h2>
+    <p class="section-subtitle">Découvrez nos saveurs authentiques préparées avec passion</p>
+  </div>
+
+  <div class="search-bar" role="search">
+    <svg width="18" height="18" fill="none" stroke="#9A8A6A" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+    </svg>
+    <input type="search" id="search-input"
+           data-i18n-placeholder="search_placeholder"
+           placeholder="Rechercher un plat…"
+           autocomplete="off"
+           aria-label="Rechercher un plat">
+    <button class="search-clear" id="search-clear" onclick="clearSearch()" hidden aria-label="Effacer la recherche">✕</button>
+  </div>
+
+  <div class="results-count" id="results-count" role="status" aria-live="polite"></div>
+
+  <div class="category-tabs-wrap" role="tablist" aria-label="Catégories">
+    <div class="category-tabs" id="category-tabs"></div>
+  </div>
+
+  <div class="menu-grid" id="menu-grid" role="list"></div>
+</main>
+
+<!-- ─── ABOUT ─────────────────────────────────────────── -->
+<section id="about" aria-label="Notre histoire">
+  <div class="about-wrap">
+    <div class="section-header">
+      <div class="section-ornament" aria-hidden="true">
+        <svg width="40" height="20" viewBox="0 0 40 20" fill="none">
+          <line x1="0" y1="10" x2="14" y2="10" stroke="#C9A84C" stroke-width="1"/>
+          <circle cx="20" cy="10" r="4" stroke="#C9A84C" stroke-width="1" fill="rgba(201,168,76,0.1)"/>
+          <line x1="26" y1="10" x2="40" y2="10" stroke="#C9A84C" stroke-width="1"/>
+        </svg>
+      </div>
+      <h2 class="section-title" data-i18n="section_about">Notre Histoire</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <p data-i18n="about_p1"></p>
+        <p data-i18n="about_p2"></p>
+        <p data-i18n="about_p3"></p>
+
+        <h3 class="why-section-title" data-i18n="why_title">Pourquoi nous choisir ?</h3>
+        <div class="why-grid">
+          <div class="why-card">
+            <svg class="why-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2a7 7 0 017 7c0 5-7 13-7 13S5 14 5 9a7 7 0 017-7z"/><circle cx="12" cy="9" r="2.5"/>
+            </svg>
+            <div class="why-title" data-i18n="why_1_title">Cuisine Authentique</div>
+            <div class="why-desc"  data-i18n="why_1_desc">Recettes transmises de génération en génération</div>
+          </div>
+          <div class="why-card">
+            <svg class="why-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+            </svg>
+            <div class="why-title" data-i18n="why_2_title">Service Express</div>
+            <div class="why-desc"  data-i18n="why_2_desc">Commande prête en 10-15 minutes</div>
+          </div>
+          <div class="why-card">
+            <svg class="why-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <line x1="12" y1="1" x2="12" y2="23"/>
+              <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+            </svg>
+            <div class="why-title" data-i18n="why_3_title">Prix Abordables</div>
+            <div class="why-desc"  data-i18n="why_3_desc">Repas complet dès 35 MAD</div>
+          </div>
+          <div class="why-card">
+            <svg class="why-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+            </svg>
+            <div class="why-title" data-i18n="why_4_title">Fait avec Passion</div>
+            <div class="why-desc"  data-i18n="why_4_desc">Chaque plat préparé avec amour</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-map">
+        <div class="map-frame">
+          <iframe id="map-iframe" src="" loading="lazy" allowfullscreen
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Localisation Snack El Idrissi"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── GALLERY ───────────────────────────────────────── -->
+<section id="gallery" class="section" aria-label="Galerie photos">
+  <div class="section-header">
+    <div class="section-ornament" aria-hidden="true">
+      <svg width="40" height="20" viewBox="0 0 40 20" fill="none">
+        <line x1="0" y1="10" x2="14" y2="10" stroke="#C9A84C" stroke-width="1"/>
+        <circle cx="20" cy="10" r="4" stroke="#C9A84C" stroke-width="1" fill="rgba(201,168,76,0.1)"/>
+        <line x1="26" y1="10" x2="40" y2="10" stroke="#C9A84C" stroke-width="1"/>
+      </svg>
+    </div>
+    <h2 class="section-title" data-i18n="section_gallery">Notre Galerie</h2>
+  </div>
+  <div class="gallery-grid" id="gallery-grid" role="list"></div>
+</section>
+
+<!-- ─── TESTIMONIALS ─────────────────────────────────── -->
+<section id="testimonials" aria-label="Témoignages clients">
+  <div class="testimonials-wrap">
+    <div class="section-header">
+      <div class="section-ornament" aria-hidden="true">
+        <svg width="40" height="20" viewBox="0 0 40 20" fill="none">
+          <line x1="0" y1="10" x2="14" y2="10" stroke="#C9A84C" stroke-width="1"/>
+          <circle cx="20" cy="10" r="4" stroke="#C9A84C" stroke-width="1" fill="rgba(201,168,76,0.1)"/>
+          <line x1="26" y1="10" x2="40" y2="10" stroke="#C9A84C" stroke-width="1"/>
+        </svg>
+      </div>
+      <h2 class="section-title" data-i18n="section_reviews">Ce que disent nos clients</h2>
+    </div>
+
+    <div class="testimonial-carousel" id="testimonial-carousel" role="region" aria-label="Carousel témoignages">
+      <div class="testimonial-track" id="testimonial-track"></div>
+    </div>
+    <div class="carousel-nav" role="group" aria-label="Navigation carousel">
+      <button class="carousel-btn" onclick="moveCarousel(-1)" aria-label="Précédent">‹</button>
+      <div class="carousel-dots" id="carousel-dots" role="tablist"></div>
+      <button class="carousel-btn" onclick="moveCarousel(1)"  aria-label="Suivant">›</button>
+    </div>
+  </div>
+</section>
+
+<!-- ─── INFO BAND ─────────────────────────────────────── -->
+<div id="info-band" role="contentinfo">
+  <div class="info-band-wrap">
+
+    <div class="info-col">
+      <h3>
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+        </svg>
+        <span data-i18n="hours_title">Horaires</span>
+      </h3>
+      <div id="info-hours-rows"></div>
+    </div>
+
+    <div class="info-col">
+      <h3>
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+        </svg>
+        <span data-i18n="location_title">Localisation</span>
+      </h3>
+      <p id="info-address" style="color:var(--cream-soft);font-size:14px;line-height:1.6;margin-bottom:12px"></p>
+      <a id="info-maps-link" href="#" target="_blank" rel="noopener"
+         style="color:var(--gold);font-size:13px;text-decoration:none">Voir sur Google Maps →</a>
+      <div class="info-badges">
+        <span class="info-badge">
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          <span data-i18n="dine_in">Sur place</span>
+        </span>
+        <span class="info-badge">
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          <span data-i18n="takeaway">À emporter</span>
+        </span>
+        <span class="info-badge">
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          <span data-i18n="delivery">Livraison</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="info-col">
+      <h3>
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 15a19.79 19.79 0 01-3.07-8.67A2 2 0 013.6 4.27h3.01a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 11a16 16 0 006.09 6.09l.95-.95a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 18.4v2.52"/>
+        </svg>
+        <span data-i18n="contact_title">Contact</span>
+      </h3>
+      <a id="info-phone" href="tel:+212688728284" class="contact-item">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 15"/>
+        </svg>
+        06 88 72 82 84
+      </a>
+      <a href="https://wa.me/212688728284" target="_blank" rel="noopener" class="contact-item wa-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a10.1 10.1 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.127.557 4.116 1.526 5.847L.066 23.453a.5.5 0 00.621.617l5.738-1.449A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.694-.499-5.246-1.369l-.333-.192-3.566.9.929-3.478-.209-.347A9.975 9.975 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/>
+        </svg>
+        WhatsApp
+      </a>
+      <div class="social-row">
+        <a id="social-ig" href="#" class="social-btn" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </a>
+        <a id="social-fb" href="#" class="social-btn" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+          </svg>
+        </a>
+        <a id="social-gm" href="#" class="social-btn" target="_blank" rel="noopener" aria-label="Google Maps">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── FOOTER ────────────────────────────────────────── -->
+<footer role="contentinfo">
+  <div class="footer-logo">Snack El Idrissi</div>
+  <p class="footer-tagline" data-i18n="footer_tagline">Saveurs d'ici, passion d'ailleurs</p>
+  <nav class="footer-links" aria-label="Liens footer">
+    <a href="#hero"      data-i18n="nav_home">Accueil</a>
+    <a href="#menu"      data-i18n="nav_menu">Menu</a>
+    <a href="#about"     data-i18n="nav_about">À propos</a>
+    <a href="#gallery"   data-i18n="nav_gallery">Galerie</a>
+    <a href="#info-band" data-i18n="nav_contact">Contact</a>
+  </nav>
+  <div class="footer-divider" aria-hidden="true"></div>
+  <p class="footer-copy" data-i18n="footer_rights">© 2025 Snack El Idrissi · Casablanca</p>
+</footer>
+
+<!-- ─── CART SIDEBAR ──────────────────────────────────── -->
+<div id="cart-overlay" role="presentation"></div>
+
+<aside id="cart-sidebar" role="dialog" aria-modal="true" aria-label="Panier">
+  <div class="cart-header">
+    <div class="cart-header-title">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <path d="M16 10a4 4 0 01-8 0"/>
+      </svg>
+      <span data-i18n="cart_title">Mon Panier</span>
+      <span id="cart-count-label" aria-live="polite"></span>
+    </div>
+    <button class="cart-close" onclick="closeCart()" aria-label="Fermer le panier">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="cart-items" id="cart-items"></div>
+
+  <!-- Promo code -->
+  <div class="promo-section" id="promo-section" style="display:none">
+    <div class="promo-input-wrap">
+      <input type="text" class="promo-input" id="promo-input"
+             data-i18n-placeholder="promo_placeholder" placeholder="Code promo"
+             autocomplete="off">
+      <button class="promo-apply" data-i18n="promo_apply">Appliquer</button>
+    </div>
+  </div>
+
+  <!-- Customer form -->
+  <div class="cart-form" id="cart-form" style="display:none">
+    <div class="form-field">
+      <label class="form-label" for="customer-name" data-i18n="label_name">Nom complet</label>
+      <input type="text" id="customer-name" class="form-input"
+             data-i18n-placeholder="placeholder_name" placeholder="Votre nom complet"
+             autocomplete="name">
+      <div class="field-error" id="err-name" role="alert"></div>
+    </div>
+    <div class="form-field">
+      <label class="form-label" for="customer-phone" data-i18n="label_phone">Téléphone</label>
+      <input type="tel" id="customer-phone" class="form-input"
+             data-i18n-placeholder="placeholder_phone" placeholder="06 XX XX XX XX"
+             autocomplete="tel">
+      <div class="field-error" id="err-phone" role="alert"></div>
+    </div>
+    <div class="form-field">
+      <label class="form-label" for="customer-address" data-i18n="label_address">Adresse (optionnel)</label>
+      <input type="text" id="customer-address" class="form-input"
+             data-i18n-placeholder="placeholder_address" placeholder="Votre adresse"
+             autocomplete="street-address">
+    </div>
+    <div class="form-field">
+      <label class="form-label" for="order-notes" data-i18n="label_notes">Notes</label>
+      <textarea id="order-notes" class="form-input" rows="2"
+                data-i18n-placeholder="placeholder_notes" placeholder="Allergies, cuisson…"></textarea>
+    </div>
+  </div>
+
+  <!-- Summary -->
+  <div class="cart-summary" id="cart-summary" style="display:none">
+    <div class="summary-row">
+      <span data-i18n="cart_subtotal">Sous-total</span>
+      <span class="amount" id="summary-subtotal">0 MAD</span>
+    </div>
+    <div class="summary-row">
+      <span data-i18n="cart_delivery">Livraison</span>
+      <span class="amount">0 MAD</span>
+    </div>
+    <div class="summary-row total">
+      <span data-i18n="cart_total">Total</span>
+      <span class="amount" id="summary-total">0 MAD</span>
+    </div>
+  </div>
+
+  <!-- Actions -->
+  <div class="cart-actions">
+    <button id="btn-whatsapp-order" class="btn-whatsapp" onclick="sendWhatsAppOrder()" style="display:none">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a10.1 10.1 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.127.557 4.116 1.526 5.847L.066 23.453a.5.5 0 00.621.617l5.738-1.449A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.694-.499-5.246-1.369l-.333-.192-3.566.9.929-3.478-.209-.347A9.975 9.975 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/>
+      </svg>
+      <span data-i18n="btn_whatsapp">Commander sur WhatsApp</span>
+    </button>
+    <button id="btn-clear-cart" class="btn-clear" onclick="clearCart()" style="display:none">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+        <polyline points="3 6 5 6 21 6"/>
+        <path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a1 1 0 011-1h4a1 1 0 011 1v2"/>
+      </svg>
+      <span data-i18n="btn_clear_cart">Vider le panier</span>
+    </button>
+    <button id="btn-view-menu-cart" class="btn-view-menu-empty"
+            onclick="closeCart();scrollToMenu()">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/>
+        <rect x="9" y="3" width="6" height="4" rx="1"/>
+      </svg>
+      <span data-i18n="btn_view_menu">Voir le Menu</span>
+    </button>
+  </div>
+</aside>
+
+<!-- ─── LIGHTBOX ──────────────────────────────────────── -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Visionneuse photo">
+  <button id="lb-close" class="lb-btn" onclick="closeLightbox()" aria-label="Fermer">✕</button>
+  <button id="lb-prev"  class="lb-btn" onclick="lightboxNav(-1)" aria-label="Photo précédente">‹</button>
+  <img id="lightbox-img" src="" alt="">
+  <button id="lb-next"  class="lb-btn" onclick="lightboxNav(1)"  aria-label="Photo suivante">›</button>
+</div>
+
+<!-- ─── FLOATING ELEMENTS ────────────────────────────── -->
+<a id="whatsapp-float" href="https://wa.me/212688728284" target="_blank" rel="noopener"
+   class="wa-link" aria-label="Commander sur WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a10.1 10.1 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.127.557 4.116 1.526 5.847L.066 23.453a.5.5 0 00.621.617l5.738-1.449A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.694-.499-5.246-1.369l-.333-.192-3.566.9.929-3.478-.209-.347A9.975 9.975 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/>
+  </svg>
+</a>
+
+<button id="back-to-top" onclick="scrollToTop()" aria-label="Retour en haut de la page">
+  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+    <polyline points="18 15 12 9 6 15"/>
+  </svg>
+</button>
+
+<div id="mobile-order-bar" onclick="openCart()" role="button" tabindex="0" aria-label="Commander sur WhatsApp">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a10.1 10.1 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.127.557 4.116 1.526 5.847L.066 23.453a.5.5 0 00.621.617l5.738-1.449A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.694-.499-5.246-1.369l-.333-.192-3.566.9.929-3.478-.209-.347A9.975 9.975 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/>
+  </svg>
+  <span data-i18n="btn_whatsapp">Commander sur WhatsApp</span>
+</div>
+
+<!-- ─── COOKIE BANNER ─────────────────────────────────── -->
+<div id="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookies">
+  <span class="cookie-text" data-i18n="cookie_text">Nous utilisons des cookies pour améliorer votre expérience.</span>
+  <div class="cookie-btns">
+    <button class="cookie-accept" onclick="acceptCookie()" data-i18n="cookie_accept">Accepter</button>
+    <button class="cookie-decline" onclick="declineCookie()" data-i18n="cookie_decline">Refuser</button>
+  </div>
+</div>
+
+<!-- ─── TOAST CONTAINER ───────────────────────────────── -->
+<div id="toast-container" role="region" aria-live="polite" aria-label="Notifications"></div>
+
+<!-- ─── APP SCRIPT ───────────────────────────────────── -->
+<script src="app.js"></script>
+</body>
+</html>

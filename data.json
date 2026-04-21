@@ -1,0 +1,339 @@
+{
+  "restaurant": {
+    "name": "Snack El Idrissi",
+    "city": "Casablanca",
+    "phone": "+212688728284",
+    "whatsapp": "212688728284",
+    "rating": 4.5,
+    "reviewCount": 46,
+    "avgPrice": 65,
+    "foundedYear": 2010,
+    "hours": [
+      { "days": { "fr": "Lundi – Vendredi", "en": "Monday – Friday", "ar": "الاثنين – الجمعة" }, "time": "11:00 – 23:00" },
+      { "days": { "fr": "Samedi",           "en": "Saturday",        "ar": "السبت"            }, "time": "10:00 – 23:30" },
+      { "days": { "fr": "Dimanche",         "en": "Sunday",          "ar": "الأحد"             }, "time": "10:00 – 22:30" }
+    ],
+    "address": { "fr": "GCPC+CG4, Casablanca, Maroc", "en": "GCPC+CG4, Casablanca, Morocco", "ar": "GCPC+CG4، الدار البيضاء، المغرب" },
+    "mapsUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106376.64785834682!2d-7.6889747168261815!3d33.57311660786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7cd4778aa113b%3A0xb06c1d84f310fd3!2sCasablanca%2C%20Maroc!5e0!3m2!1sfr!2sma!4v1700000000000",
+    "social": {
+      "instagram": "#",
+      "facebook": "#",
+      "maps": "https://maps.google.com/?q=Snack+El+Idrissi+Casablanca"
+    }
+  },
+
+  "categories": [
+    { "id": "all",             "icon": "🍽️" },
+    { "id": "grillades",       "icon": "🥩" },
+    { "id": "sandwichs",       "icon": "🥪" },
+    { "id": "accompagnements", "icon": "🍟" },
+    { "id": "salades",         "icon": "🥗" },
+    { "id": "boissons",        "icon": "🧃" },
+    { "id": "desserts",        "icon": "🍮" }
+  ],
+
+  "menu": [
+    {
+      "id": 1, "category": "grillades",
+      "name":  { "fr": "Kefta Brochette",      "en": "Kefta Skewer",       "ar": "كفتة مشوية" },
+      "desc":  { "fr": "Viande hachée épicée grillée au charbon de bois", "en": "Spiced minced meat grilled over charcoal", "ar": "لحم مفروم متبّل مشوي على الفحم" },
+      "price": 45, "spice": 2, "popular": true,  "isNew": false, "isSpecial": false,
+      "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=500&q=80"
+    },
+    {
+      "id": 2, "category": "grillades",
+      "name":  { "fr": "Brochette de Poulet",  "en": "Chicken Skewer",     "ar": "برشيطة دجاج" },
+      "desc":  { "fr": "Tendres morceaux de poulet marinés aux épices marocaines", "en": "Tender chicken pieces marinated in Moroccan spices", "ar": "قطع دجاج طرية متبّلة بالتوابل المغربية" },
+      "price": 40, "spice": 1, "popular": false, "isNew": false,
+      "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=500&q=80"
+    },
+    {
+      "id": 3, "category": "grillades",
+      "name":  { "fr": "Merguez Grillées",     "en": "Grilled Merguez",    "ar": "مرقاز مشوي" },
+      "desc":  { "fr": "Saucisses épicées grillées, servies avec harissa maison", "en": "Spiced grilled sausages served with homemade harissa", "ar": "نقانق حارة مشوية مع هريسة منزلية" },
+      "price": 35, "spice": 3, "popular": true,  "isNew": false, "isSpecial": true,
+      "image": "https://images.unsplash.com/photo-1558030137-a56c1b004fa3?w=500&q=80"
+    },
+    {
+      "id": 4, "category": "grillades",
+      "name":  { "fr": "Côtelettes d'Agneau",  "en": "Lamb Chops",         "ar": "ضلوع خروف" },
+      "desc":  { "fr": "Côtelettes d'agneau grillées aux herbes et citron confit", "en": "Grilled lamb chops with herbs and preserved lemon", "ar": "ضلوع خروف مشوية بالأعشاب والليمون المصبّر" },
+      "price": 85, "spice": 1, "popular": true,  "isNew": false,
+      "image": "https://images.unsplash.com/photo-1547592180-85f173990554?w=500&q=80"
+    },
+    {
+      "id": 5, "category": "grillades",
+      "name":  { "fr": "Assiette Mixte Grillades", "en": "Mixed Grill Plate", "ar": "طبق مشاوي مشكّل" },
+      "desc":  { "fr": "Assortiment kefta, merguez, brochette poulet — pour 2 personnes", "en": "Kefta, merguez, chicken skewer assortment — for 2", "ar": "تشكيلة كفتة ومرقاز وبرشيطة دجاج — لشخصين" },
+      "price": 95, "spice": 2, "popular": true,  "isNew": true, "isSpecial": true,
+      "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=500&q=80"
+    },
+    {
+      "id": 6, "category": "sandwichs",
+      "name":  { "fr": "Panini Kefta",         "en": "Kefta Panini",       "ar": "بانيني كفتة" },
+      "desc":  { "fr": "Pain ciabatta grillé, kefta maison, fromage fondu, tomate", "en": "Grilled ciabatta, homemade kefta, melted cheese, tomato", "ar": "خبز محمص بالكفتة والجبن الذائب والطماطم" },
+      "price": 35, "spice": 1, "popular": true,  "isNew": false,
+      "image": "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=500&q=80"
+    },
+    {
+      "id": 7, "category": "sandwichs",
+      "name":  { "fr": "Sandwich Merguez",     "en": "Merguez Sandwich",   "ar": "ساندويش مرقاز" },
+      "desc":  { "fr": "Baguette croustillante, merguez grillées, frites, harissa", "en": "Crusty baguette, grilled merguez, fries, harissa", "ar": "باغيت هش مع مرقاز مشوي وبطاطا وهريسة" },
+      "price": 28, "spice": 2, "popular": false, "isNew": false,
+      "image": "https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=500&q=80"
+    },
+    {
+      "id": 8, "category": "sandwichs",
+      "name":  { "fr": "Club Poulet Grillé",   "en": "Grilled Chicken Club", "ar": "كلوب دجاج مشوي" },
+      "desc":  { "fr": "Pain de mie grillé, poulet, salade, mayo citron, cornichons", "en": "Toasted bread, chicken, lettuce, lemon mayo, pickles", "ar": "خبز محمص مع دجاج وخس ومايونيز ليمون ومخلل" },
+      "price": 38, "spice": 0, "popular": false, "isNew": true,
+      "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&q=80"
+    },
+    {
+      "id": 9, "category": "accompagnements",
+      "name":  { "fr": "Frites Maison",        "en": "Homemade Fries",     "ar": "بطاطا مقلية منزلية" },
+      "desc":  { "fr": "Pommes de terre fraîches taillées main, croustillantes", "en": "Fresh hand-cut potatoes, extra crispy", "ar": "بطاطا طازجة مقطعة يدوياً ومقرمشة" },
+      "price": 20, "spice": 0, "popular": false, "isNew": false, "isVeg": true,
+      "image": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=500&q=80"
+    },
+    {
+      "id": 10, "category": "accompagnements",
+      "name":  { "fr": "Frites Épicées",       "en": "Spicy Fries",        "ar": "بطاطا حارة" },
+      "desc":  { "fr": "Frites assaisonnées cumin, paprika, piment doux", "en": "Fries seasoned with cumin, paprika, sweet pepper", "ar": "بطاطا متبّلة بالكمون والبابريكا والفلفل الحلو" },
+      "price": 25, "spice": 2, "popular": true,  "isNew": false, "isVeg": true,
+      "image": "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?w=500&q=80"
+    },
+    {
+      "id": 11, "category": "accompagnements",
+      "name":  { "fr": "Khobz + Huile d'Olive", "en": "Moroccan Bread + Olive Oil", "ar": "خبز مغربي + زيت الزيتون" },
+      "desc":  { "fr": "Pain plat artisanal cuit au four, huile d'olive argan", "en": "Artisan flatbread with argan olive oil", "ar": "خبز مسطح حرفي مع زيت أركان" },
+      "price": 15, "spice": 0, "popular": false, "isNew": false, "isVeg": true,
+      "image": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=500&q=80"
+    },
+    {
+      "id": 12, "category": "salades",
+      "name":  { "fr": "Salade Marocaine Classique", "en": "Classic Moroccan Salad", "ar": "سلطة مغربية كلاسيكية" },
+      "desc":  { "fr": "Tomate, poivron, concombre, oignon, coriandre, citron", "en": "Tomato, pepper, cucumber, onion, coriander, lemon", "ar": "طماطم وفليفلة وخيار وبصل وكزبرة وليمون" },
+      "price": 22, "spice": 0, "popular": false, "isNew": false, "isVeg": true,
+      "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&q=80"
+    },
+    {
+      "id": 13, "category": "salades",
+      "name":  { "fr": "Zaalouk Aubergine",    "en": "Aubergine Zaalouk",  "ar": "زعلوك الباذنجان" },
+      "desc":  { "fr": "Purée d'aubergines grillées aux tomates, ail, cumin", "en": "Grilled eggplant purée with tomatoes, garlic, cumin", "ar": "هريس الباذنجان المشوي مع الطماطم والثوم والكمون" },
+      "price": 25, "spice": 1, "popular": true,  "isNew": false, "isVeg": true,
+      "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500&q=80"
+    },
+    {
+      "id": 14, "category": "salades",
+      "name":  { "fr": "Taktouka Poivrons",    "en": "Pepper Taktouka",    "ar": "تكتوكة الفلفل" },
+      "desc":  { "fr": "Poivrons et tomates rôtis à l'huile d'olive, ail, épices", "en": "Roasted peppers and tomatoes with olive oil, garlic", "ar": "فلفل وطماطم مشوية بزيت الزيتون والثوم والتوابل" },
+      "price": 22, "spice": 1, "popular": false, "isNew": false, "isVeg": true,
+      "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=500&q=80"
+    },
+    {
+      "id": 15, "category": "boissons",
+      "name":  { "fr": "Thé à la Menthe",      "en": "Mint Tea",           "ar": "أتاي بالنعناع" },
+      "desc":  { "fr": "Thé vert gunpowder, menthe fraîche, sucre — servi en théière", "en": "Gunpowder green tea, fresh mint, sugar — teapot served", "ar": "شاي أخضر بالنعناع الطازج والسكر في إبريق" },
+      "price": 15, "spice": 0, "popular": true,  "isNew": false, "isVeg": true,
+      "image": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=500&q=80"
+    },
+    {
+      "id": 16, "category": "boissons",
+      "name":  { "fr": "Jus d'Orange Frais",   "en": "Fresh Orange Juice", "ar": "عصير برتقال طازج" },
+      "desc":  { "fr": "Oranges de Marrakech pressées minute, sans sucre ajouté", "en": "Freshly squeezed Marrakech oranges, no added sugar", "ar": "برتقال مراكش معصور لحظياً بدون سكر مضاف" },
+      "price": 20, "spice": 0, "popular": true,  "isNew": false, "isVeg": true,
+      "image": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=500&q=80"
+    },
+    {
+      "id": 17, "category": "boissons",
+      "name":  { "fr": "Limonade Menthe Citron", "en": "Mint Lemon Soda",  "ar": "ليموناضة نعناع وليمون" },
+      "desc":  { "fr": "Citron frais, menthe, eau gazeuse, sirop maison", "en": "Fresh lemon, mint, sparkling water, homemade syrup", "ar": "ليمون طازج ونعناع ومياه فوارة وشراب منزلي" },
+      "price": 22, "spice": 0, "popular": false, "isNew": true,  "isVeg": true,
+      "image": "https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=500&q=80"
+    },
+    {
+      "id": 18, "category": "boissons",
+      "name":  { "fr": "Café Marocain (Nous-Nous)", "en": "Moroccan Coffee (Nous-Nous)", "ar": "قهوة مغربية نص نص" },
+      "desc":  { "fr": "Moitié expresso, moitié lait chaud, arôme de cannelle", "en": "Half espresso, half warm milk, cinnamon aroma", "ar": "نصف إسبريسو ونصف حليب ساخن مع عطر القرفة" },
+      "price": 18, "spice": 0, "popular": false, "isNew": false, "isVeg": true,
+      "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&q=80"
+    },
+    {
+      "id": 19, "category": "desserts",
+      "name":  { "fr": "Chebakia au Miel",     "en": "Honey Chebakia",     "ar": "شباكية بالعسل" },
+      "desc":  { "fr": "Pâtisserie marocaine au sésame, frite, enrobée de miel et fleur d'oranger", "en": "Moroccan pastry with sesame, fried, coated in honey and orange blossom", "ar": "حلوى مغربية بالسمسم مقلية ومغطاة بالعسل وماء الزهر" },
+      "price": 20, "spice": 0, "popular": true,  "isNew": false, "isVeg": true,
+      "image": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=500&q=80"
+    },
+    {
+      "id": 20, "category": "desserts",
+      "name":  { "fr": "Cornes de Gazelle",    "en": "Gazelle Horns",      "ar": "كعب الغزال" },
+      "desc":  { "fr": "Croissants délicats à la pâte d'amande et fleur d'oranger", "en": "Delicate almond paste crescents with orange blossom", "ar": "هلالات رقيقة بالمارزيبان وماء الزهر" },
+      "price": 25, "spice": 0, "popular": false, "isNew": false, "isVeg": true,
+      "image": "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=500&q=80"
+    },
+    {
+      "id": 21, "category": "desserts",
+      "name":  { "fr": "M'hanncha (Serpent Amande)", "en": "Almond Snake Pastry", "ar": "مهنشة اللوز" },
+      "desc":  { "fr": "Feuille de brick roulée, farcie pâte d'amande, cannelle", "en": "Rolled brick pastry filled with almond paste and cinnamon", "ar": "ورقة بريك ملفوفة محشوة بمعجون اللوز والقرفة" },
+      "price": 30, "spice": 0, "popular": true,  "isNew": true,  "isVeg": true,
+      "image": "https://images.unsplash.com/photo-1579697096985-41fe1430e5df?w=500&q=80"
+    }
+  ],
+
+  "gallery": [
+    { "url": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&q=80", "alt": { "fr": "Grillades marocaines",    "en": "Moroccan grills",        "ar": "مشاوي مغربية" } },
+    { "url": "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80", "alt": { "fr": "Brochettes kefta",        "en": "Kefta skewers",          "ar": "كفتة مشوية" } },
+    { "url": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80", "alt": { "fr": "Salade fraîche",       "en": "Fresh salad",            "ar": "سلطة طازجة" } },
+    { "url": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80", "alt": { "fr": "Desserts marocains",     "en": "Moroccan desserts",      "ar": "حلويات مغربية" } },
+    { "url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600&q=80", "alt": { "fr": "Thé à la menthe",        "en": "Mint tea",               "ar": "أتاي بالنعناع" } },
+    { "url": "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=600&q=80", "alt": { "fr": "Pâtisseries marocaines", "en": "Moroccan pastries",  "ar": "حلويات مغربية" } },
+    { "url": "https://images.unsplash.com/photo-1558030137-a56c1b004fa3?w=600&q=80", "alt": { "fr": "Merguez grillées",       "en": "Grilled merguez",        "ar": "مرقاز مشوي" } },
+    { "url": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&q=80", "alt": { "fr": "Poulet mariné",       "en": "Marinated chicken",      "ar": "دجاج متبّل" } },
+    { "url": "https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80", "alt": { "fr": "Côtelettes d'agneau",    "en": "Lamb chops",             "ar": "ضلوع خروف" } }
+  ],
+
+  "testimonials": [
+    {
+      "name": "Fatima Zahra B.", "flag": "🇲🇦", "stars": 5, "date": "Mars 2025",
+      "text": { "fr": "Les meilleures brochettes de Casablanca ! Service rapide et personnel très accueillant.", "en": "The best skewers in Casablanca! Fast service and very welcoming staff.", "ar": "أفضل مشاوي في الدار البيضاء! خدمة سريعة وموظفون في غاية الترحيب." }
+    },
+    {
+      "name": "Youssef M.", "flag": "🇲🇦", "stars": 5, "date": "Février 2025",
+      "text": { "fr": "Rapport qualité-prix imbattable. Le thé à la menthe est exceptionnel !", "en": "Unbeatable value for money. The mint tea is exceptional!", "ar": "قيمة مال لا تُنافَس. الأتاي بالنعناع استثنائي!" }
+    },
+    {
+      "name": "Marie L.", "flag": "🇫🇷", "stars": 4, "date": "Janvier 2025",
+      "text": { "fr": "Découvert en voyage à Casa. Cuisine authentique, je reviendrai à chaque visite !", "en": "Discovered on a trip to Casa. Authentic cuisine, I'll return every visit!", "ar": "اكتشفته في رحلة إلى الدار البيضاء. مطبخ أصيل، سأعود في كل زيارة!" }
+    },
+    {
+      "name": "Ahmed K.", "flag": "🇲🇦", "stars": 5, "date": "Décembre 2024",
+      "text": { "fr": "Le plat du jour est toujours une surprise agréable. Merci l'équipe !", "en": "The daily special is always a pleasant surprise. Thanks team!", "ar": "طبق اليوم دائماً مفاجأة لطيفة. شكراً للفريق!" }
+    },
+    {
+      "name": "Sarah T.", "flag": "🇬🇧", "stars": 5, "date": "Novembre 2024",
+      "text": { "fr": "Absolument divin ! La kefta et le zaalouk sont incontournables. Joyau caché de Casa.", "en": "Absolutely divine! The kefta and zaalouk are must-tries. Hidden gem of Casablanca.", "ar": "رائع تماماً! الكفتة والزعلوك لا يُفوَّتان. جوهرة خفية في الدار البيضاء." }
+    }
+  ],
+
+  "translations": {
+    "fr": {
+      "nav_home": "Accueil", "nav_menu": "Menu", "nav_about": "À propos", "nav_gallery": "Galerie", "nav_contact": "Contact",
+      "hero_pretitle": "Restaurant Marocain · Casablanca",
+      "hero_typewriter": ["Saveurs authentiques depuis 2010", "Grillades au charbon de bois", "Commandez via WhatsApp"],
+      "open_until": "Ouvert · Jusqu'à 23h00",
+      "cta_menu": "Voir le Menu", "cta_order": "Commander",
+      "stat_reviews": "Avis clients", "stat_rating": "Note Google", "stat_price": "Prix moyen MAD", "stat_since": "Fondé en",
+      "section_menu": "Notre Menu", "search_placeholder": "Rechercher un plat...",
+      "cat_all": "Tout", "cat_grillades": "Grillades", "cat_sandwichs": "Sandwichs",
+      "cat_accompagnements": "Accompagnements", "cat_salades": "Salades", "cat_boissons": "Boissons", "cat_desserts": "Desserts",
+      "badge_popular": "Populaire", "badge_new": "Nouveau", "badge_veg": "Végétarien", "badge_special": "Plat du jour",
+      "btn_add": "Ajouter",
+      "no_results": "Aucun résultat pour cette recherche", "no_results_sub": "Essayez un autre terme",
+      "results_found": "{n} plat trouvé", "results_found_plural": "{n} plats trouvés",
+      "cart_title": "Mon Panier", "cart_empty": "Votre panier est vide", "cart_empty_sub": "Ajoutez des plats délicieux !",
+      "cart_subtotal": "Sous-total", "cart_delivery": "Livraison", "cart_total": "Total",
+      "promo_placeholder": "Code promo", "promo_apply": "Appliquer",
+      "label_name": "Nom complet", "label_phone": "Téléphone", "label_address": "Adresse (optionnel)", "label_notes": "Notes / Demandes",
+      "placeholder_name": "Votre nom complet", "placeholder_phone": "06 XX XX XX XX",
+      "placeholder_address": "Votre adresse de livraison", "placeholder_notes": "Allergies, cuisson, sans sel...",
+      "btn_whatsapp": "Commander sur WhatsApp", "btn_clear_cart": "Vider le panier", "btn_view_menu": "Voir le Menu",
+      "error_name": "Le nom est requis", "error_phone": "Téléphone invalide (format: 06/07 XX XX XX XX)", "error_empty_cart": "Votre panier est vide",
+      "toast_added": "ajouté au panier !", "toast_removed": "retiré du panier", "toast_cleared": "Panier vidé",
+      "section_about": "Notre Histoire",
+      "about_p1": "Depuis 2010, Snack El Idrissi est une institution gastronomique à Casablanca, fondé avec la passion de partager la cuisine marocaine authentique. Notre snack a su conquérir le cœur de milliers de clients grâce à des recettes transmises de génération en génération.",
+      "about_p2": "Niché au cœur de Casablanca, nous proposons une cuisine marocaine fidèle aux traditions : grillades au charbon de bois, sandwichs généreux, salades fraîches et pâtisseries artisanales.",
+      "about_p3": "Notre équipe dédiée prépare chaque jour des plats avec des ingrédients frais sélectionnés avec soin, garantissant qualité et authenticité à chaque bouchée.",
+      "why_title": "Pourquoi nous choisir ?",
+      "why_1_title": "Cuisine Authentique", "why_1_desc": "Recettes transmises de génération en génération",
+      "why_2_title": "Service Express",    "why_2_desc": "Commande prête en 10-15 minutes",
+      "why_3_title": "Prix Abordables",    "why_3_desc": "Repas complet dès 35 MAD",
+      "why_4_title": "Fait avec Passion",  "why_4_desc": "Chaque plat préparé avec amour",
+      "section_gallery": "Notre Galerie", "section_reviews": "Ce que disent nos clients",
+      "hours_title": "Horaires", "location_title": "Localisation", "contact_title": "Contact",
+      "dine_in": "Sur place", "takeaway": "À emporter", "delivery": "Livraison",
+      "footer_tagline": "Saveurs d'ici, passion d'ailleurs", "footer_rights": "© 2025 Snack El Idrissi · Casablanca",
+      "cookie_text": "Nous utilisons des cookies pour améliorer votre expérience.", "cookie_accept": "Accepter", "cookie_decline": "Refuser",
+      "mad": "MAD", "loading": "Chargement...", "close": "Fermer", "prev": "Précédent", "next": "Suivant"
+    },
+    "en": {
+      "nav_home": "Home", "nav_menu": "Menu", "nav_about": "About", "nav_gallery": "Gallery", "nav_contact": "Contact",
+      "hero_pretitle": "Moroccan Restaurant · Casablanca",
+      "hero_typewriter": ["Authentic flavors since 2010", "Charcoal-grilled perfection", "Order via WhatsApp"],
+      "open_until": "Open · Until 11:00 PM",
+      "cta_menu": "View Menu", "cta_order": "Order Now",
+      "stat_reviews": "Customer reviews", "stat_rating": "Google rating", "stat_price": "Avg price MAD", "stat_since": "Founded in",
+      "section_menu": "Our Menu", "search_placeholder": "Search for a dish...",
+      "cat_all": "All", "cat_grillades": "Grills", "cat_sandwichs": "Sandwiches",
+      "cat_accompagnements": "Sides", "cat_salades": "Salads", "cat_boissons": "Drinks", "cat_desserts": "Desserts",
+      "badge_popular": "Popular", "badge_new": "New", "badge_veg": "Vegetarian", "badge_special": "Daily Special",
+      "btn_add": "Add",
+      "no_results": "No results found", "no_results_sub": "Try a different search term",
+      "results_found": "{n} dish found", "results_found_plural": "{n} dishes found",
+      "cart_title": "My Cart", "cart_empty": "Your cart is empty", "cart_empty_sub": "Add some delicious dishes!",
+      "cart_subtotal": "Subtotal", "cart_delivery": "Delivery", "cart_total": "Total",
+      "promo_placeholder": "Promo code", "promo_apply": "Apply",
+      "label_name": "Full name", "label_phone": "Phone number", "label_address": "Address (optional)", "label_notes": "Notes / Special requests",
+      "placeholder_name": "Your full name", "placeholder_phone": "06 XX XX XX XX",
+      "placeholder_address": "Your delivery address", "placeholder_notes": "Allergies, cooking preference, no salt...",
+      "btn_whatsapp": "Order on WhatsApp", "btn_clear_cart": "Clear cart", "btn_view_menu": "View Menu",
+      "error_name": "Name is required", "error_phone": "Invalid phone (format: 06/07 XX XX XX XX)", "error_empty_cart": "Your cart is empty",
+      "toast_added": "added to cart!", "toast_removed": "removed from cart", "toast_cleared": "Cart cleared",
+      "section_about": "Our Story",
+      "about_p1": "Since 2010, Snack El Idrissi has been a gastronomic institution in Casablanca, founded with a passion for sharing authentic Moroccan cuisine. We have won the hearts of thousands of customers through recipes passed down through generations.",
+      "about_p2": "Nestled in the heart of Casablanca, we offer traditional Moroccan cuisine: charcoal grills, generous sandwiches, fresh salads and artisan pastries.",
+      "about_p3": "Our dedicated team prepares dishes daily with carefully selected fresh ingredients, guaranteeing quality and authenticity in every bite.",
+      "why_title": "Why choose us?",
+      "why_1_title": "Authentic Cuisine", "why_1_desc": "Recipes passed down through generations",
+      "why_2_title": "Express Service",   "why_2_desc": "Order ready in 10-15 minutes",
+      "why_3_title": "Affordable Prices", "why_3_desc": "Full meal from 35 MAD",
+      "why_4_title": "Made with Passion", "why_4_desc": "Every dish prepared with love",
+      "section_gallery": "Our Gallery", "section_reviews": "What our customers say",
+      "hours_title": "Hours", "location_title": "Location", "contact_title": "Contact",
+      "dine_in": "Dine-in", "takeaway": "Takeaway", "delivery": "Delivery",
+      "footer_tagline": "Local flavors, endless passion", "footer_rights": "© 2025 Snack El Idrissi · Casablanca",
+      "cookie_text": "We use cookies to improve your experience.", "cookie_accept": "Accept", "cookie_decline": "Decline",
+      "mad": "MAD", "loading": "Loading...", "close": "Close", "prev": "Previous", "next": "Next"
+    },
+    "ar": {
+      "nav_home": "الرئيسية", "nav_menu": "القائمة", "nav_about": "من نحن", "nav_gallery": "المعرض", "nav_contact": "اتصل بنا",
+      "hero_pretitle": "مطعم مغربي · الدار البيضاء",
+      "hero_typewriter": ["نكهات أصيلة منذ 2010", "مشاوي على الفحم الطبيعي", "اطلب عبر واتساب"],
+      "open_until": "مفتوح · حتى 11:00 مساءً",
+      "cta_menu": "عرض القائمة", "cta_order": "اطلب الآن",
+      "stat_reviews": "تقييمات", "stat_rating": "تقييم جوجل", "stat_price": "متوسط السعر", "stat_since": "منذ",
+      "section_menu": "قائمتنا", "search_placeholder": "ابحث عن طبق...",
+      "cat_all": "الكل", "cat_grillades": "مشاوي", "cat_sandwichs": "ساندويشات",
+      "cat_accompagnements": "مرافقات", "cat_salades": "سلطات", "cat_boissons": "مشروبات", "cat_desserts": "حلويات",
+      "badge_popular": "مشهور", "badge_new": "جديد", "badge_veg": "نباتي", "badge_special": "طبق اليوم",
+      "btn_add": "أضف",
+      "no_results": "لا توجد نتائج", "no_results_sub": "جرب مصطلح بحث آخر",
+      "results_found": "عُثر على {n} طبق", "results_found_plural": "عُثر على {n} أطباق",
+      "cart_title": "سلة التسوق", "cart_empty": "سلتك فارغة", "cart_empty_sub": "أضف بعض الأطباق اللذيذة!",
+      "cart_subtotal": "المجموع الفرعي", "cart_delivery": "التوصيل", "cart_total": "المجموع",
+      "promo_placeholder": "رمز الخصم", "promo_apply": "تطبيق",
+      "label_name": "الاسم الكامل", "label_phone": "رقم الهاتف", "label_address": "العنوان (اختياري)", "label_notes": "ملاحظات / طلبات خاصة",
+      "placeholder_name": "اسمك الكامل", "placeholder_phone": "06 XX XX XX XX",
+      "placeholder_address": "عنوان التوصيل", "placeholder_notes": "حساسيات، طريقة الطهي، بدون ملح...",
+      "btn_whatsapp": "اطلب عبر واتساب", "btn_clear_cart": "إفراغ السلة", "btn_view_menu": "عرض القائمة",
+      "error_name": "الاسم مطلوب", "error_phone": "رقم هاتف غير صالح (صيغة: 06/07 XX XX XX XX)", "error_empty_cart": "سلتك فارغة",
+      "toast_added": "أُضيف إلى السلة!", "toast_removed": "أُزيل من السلة", "toast_cleared": "تم إفراغ السلة",
+      "section_about": "قصتنا",
+      "about_p1": "منذ 2010، يُعدّ سناك الإدريسي مؤسسة غذائية راسخة في الدار البيضاء، تأسس بشغف مشاركة المطبخ المغربي الأصيل. لقد استطعنا كسب قلوب آلاف العملاء بفضل وصفات متوارثة عبر الأجيال.",
+      "about_p2": "في قلب الدار البيضاء، نقدم مطبخاً مغربياً وفياً للتقاليد: مشاوي على الفحم الطبيعي، ساندويشات سخية، سلطات طازجة وحلويات حرفية.",
+      "about_p3": "يُعدّ فريقنا المتفاني الأطباق يومياً بمكونات طازجة مختارة بعناية، ضمانةً للجودة والأصالة في كل لقمة.",
+      "why_title": "لماذا تختارنا؟",
+      "why_1_title": "مطبخ أصيل",    "why_1_desc": "وصفات متوارثة عبر الأجيال",
+      "why_2_title": "خدمة سريعة",   "why_2_desc": "طلبك جاهز في 10-15 دقيقة",
+      "why_3_title": "أسعار معقولة", "why_3_desc": "وجبة كاملة من 35 درهم",
+      "why_4_title": "مصنوع بشغف",   "why_4_desc": "كل طبق يُعدّ بحب",
+      "section_gallery": "معرض الصور", "section_reviews": "ماذا يقول عملاؤنا",
+      "hours_title": "أوقات العمل", "location_title": "الموقع", "contact_title": "اتصل بنا",
+      "dine_in": "بالمطعم", "takeaway": "للحمل", "delivery": "توصيل",
+      "footer_tagline": "نكهات محلية، شغف لا ينتهي", "footer_rights": "© 2025 سناك الإدريسي · الدار البيضاء",
+      "cookie_text": "نستخدم الكوكيز لتحسين تجربتك.", "cookie_accept": "قبول", "cookie_decline": "رفض",
+      "mad": "درهم", "loading": "جارٍ التحميل...", "close": "إغلاق", "prev": "السابق", "next": "التالي"
+    }
+  }
+}
