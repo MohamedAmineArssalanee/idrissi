@@ -34,13 +34,6 @@
 
   "menu": [
      {
-      "id": 3, "category": "grillades",
-      "name":  { "fr": "Merguez Grillées",     "en": "Grilled Merguez",    "ar": "مرقاز مشوي" },
-      "desc":  { "fr": "Saucisses épicées grillées, servies avec harissa maison", "en": "Spiced grilled sausages served with homemade harissa", "ar": "نقانق حارة مشوية مع هريسة منزلية" },
-      "price": 35, "spice": 3, "popular": true,  "isNew": false, "isSpecial": true,
-      "image": "https://images.unsplash.com/photo-1558030137-a56c1b004fa3?w=500&q=80"
-    },
-    {
       "id": 1, "category": "grillades",
       "name":  { "fr": "Kefta Brochette",      "en": "Kefta Skewer",       "ar": "كفتة مشوية" },
       "desc":  { "fr": "Viande hachée épicée grillée au charbon de bois", "en": "Spiced minced meat grilled over charcoal", "ar": "لحم مفروم متبّل مشوي على الفحم" },
